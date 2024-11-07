@@ -21,18 +21,20 @@ def apply_gaussian_blur(input_image_path, output_image_path, kernel_size=(5, 5),
 
 
 def convertFolder(inputPath, outputPath):
+    os.mkdir(outputPath)
     for file in os.listdir(inputPath):
         apply_gaussian_blur(os.path.join(inputPath, file), os.path.join(outputPath, "blured_" +  file))
 
         print(file)
-        print("""
         
-        
-        """ + inputPath + """
-        
-        
-        
-        """)
+    print("""
+    
+    
+    """ + inputPath + """
+    
+    
+    
+    """)
 
 
 if __name__ == '__main__':
