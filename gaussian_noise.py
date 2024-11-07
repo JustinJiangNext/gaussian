@@ -28,18 +28,19 @@ def add_gaussian_noise(input_image_path, output_image_path, mean=0, std_dev=25):
 
 
 def convertFolder(inputPath, outputPath):
+    os.system("mkdir " + outputPath)
     for file in os.listdir(inputPath):
         add_gaussian_noise(os.path.join(inputPath, file), os.path.join(outputPath, "noised_" + file))
 
         print(file)
-        print("""
-        
-        
-        """ + inputPath + """
-        
-        
-        
-        """)
+    print("""
+    
+    
+    """ + inputPath + """
+    
+    
+    
+    """)
 
 
 
